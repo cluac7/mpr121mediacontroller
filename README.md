@@ -2,10 +2,9 @@
 Simple media controller using an arduino, mpr121 and rust 🤩
 
 ## Features
-- Pauses and plays Spotify music
-- [ ] Pauses and plays default player
-- [ ] Skips and goes back on Spotify
-- [ ] Skips and goes back on default player
+- [x] Pauses and plays Spotify music
+- [x] Pauses and plays default player
+- [x] Skips and goes back on Spotify
 
 ## Usage
 1. Assign the pins on the mpr121 you want to use at the top of the main function in main.rs
