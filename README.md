@@ -18,3 +18,6 @@ let default_pin = String::from("X");    // Replace "X" with the pin number and d
 (Baud rate is generally 9600 and my serial port was /dev/ttyACM0)
 
 5. Run `./mediacontroller < /dev/[YOUR SERIAL PORT]`
+
+## NOTE
+There is currently an issue with the serial port in that you don't gain read/write permissions as soon as the Arduino is plugged in and have to run `sudo chmod a+wr /dev/[YOUR SERIAL PORT]`, then reupload code and rerun the rust program. I prob did another fucky wucky.
