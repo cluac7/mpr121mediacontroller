@@ -15,7 +15,6 @@ let default_pin = String::from("X");    // Replace "X" with the pin number and d
 2. Upload mediacentre.ino to the arduino
 3. Figure out the serial port and baud rate. I did this by launching the serial monitor in the Arduino IDE as it is usually setup correctly and just checking there
 4. Set those by running `stty [BAUD RATE] < /dev/[YOUR SERIAL PORT]` 
-
 (Baud rate is generally 9600 and my serial port was /dev/ttyACM0)
 
 5. Run `./mediacontroller < /dev/[YOUR SERIAL PORT]`
