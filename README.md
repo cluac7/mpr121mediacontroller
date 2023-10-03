@@ -32,3 +32,4 @@ so in my case it was:
 ```
 sudo usermod -aG uucp rahul
 ```
+Then log out and login again, or reboot. :D
