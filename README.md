@@ -19,4 +19,16 @@ let default_pin = String::from("X");    // Replace "X" with the pin number and d
 5. Run `./mediacontroller < /dev/[YOUR SERIAL PORT]`
 
 ## NOTE
-There is currently an issue with the serial port in that you don't gain read/write permissions as soon as the Arduino is plugged in and have to run `sudo chmod a+wr /dev/[YOUR SERIAL PORT]`, then reupload code and rerun the rust program. I prob did another fucky wucky.
+If your Arduino IDE when you try to upload code, says permission denied to /dev/[YOUR SERIAL PORT], type `ls -l /dev/[YOUR SERIAL PORT]`.
+This will print something like
+```
+crw-rw---- 1 root uucp 166, 0 Oct  3 15:07 /dev/ttyACM0
+```
+Look for the word after root, in my case "uucp". This is the group you must add yourself to. To do that type:
+```
+sudo usermod -aG [NAME OF GROUP] [YOUR USERNAME]
+```
+so in my case it was:
+```
+sudo usermod -aG uucp rahul
+```
